@@ -2,8 +2,6 @@ import os
 import openai
 # Create instance of FieldStorage 
 # Get data from fields
-first_name = form.getvalue('first_name')
-last_name  = form.getvalue('last_name')
 
 class TextPredictor():
   def __init__(self):
