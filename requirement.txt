@@ -2,3 +2,7 @@
 
 gunicorn
 flask
+pandas
+openai
+cgi 
+cgitb 
