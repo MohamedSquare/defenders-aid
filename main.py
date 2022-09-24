@@ -1,6 +1,6 @@
 import os
 import openai
-s3 = os.environ['OPENAI']
+
 # Create instance of FieldStorage 
 # Get data from fields
 
@@ -8,9 +8,9 @@ class TextPredictor():
   def __init__(self):
     self.prompts = "Decide what Human Right Article is associated with the description text.\n\nDescription: Housing Demolition\nHuman Rights Article: Article 25\n\nDescription: Restricted Speech\nHuman Rights Article: Article 19\n\nDescription: unfair hearing\nHuman Rights Article:  Article 14 \n\nDescription: torture\nHuman Rights Article: Article 5\n\nDescription: I was imprisoned unfairly by the government\nHuman Rights Article:  Article 9\n\nDescription: The government demolished my home and is refusing to give me health treatment.\nHuman Rights Article:  Article 25 and Article 12"
     self.model = "text-davinci-002"
-    self.key = s3
+    self.key = os.environ['OPENAI']
     self.answer = None
-    openai.api_key = s3
+    openai.api_key = os.environ['OPENAI']
   def update_prompt_answer(self, answer):
     self.prompts += answer
     return 
