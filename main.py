@@ -7,9 +7,9 @@ class TextPredictor():
   def __init__(self):
     self.prompts = "Decide what Human Right Article is associated with the description text.\n\nDescription: Housing Demolition\nHuman Rights Article: Article 25\n\nDescription: Restricted Speech\nHuman Rights Article: Article 19\n\nDescription: unfair hearing\nHuman Rights Article:  Article 14 \n\nDescription: torture\nHuman Rights Article: Article 5\n\nDescription: I was imprisoned unfairly by the government\nHuman Rights Article:  Article 9\n\nDescription: The government demolished my home and is refusing to give me health treatment.\nHuman Rights Article:  Article 25 and Article 12"
     self.model = "text-davinci-002"
-    self.key = "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"
+    self.key = "NONE"
     self.answer = None
-    openai.api_key = "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"
+    openai.api_key = "none"
   def update_prompt_answer(self, answer):
     self.prompts += answer
     return 
