@@ -8,7 +8,16 @@
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
     }
-    
+    #text-box{
+      position: inherit;
+    top: 460px;
+    left: 290px;
+    font-size: 14px;
+    border-bottom-right-radius: 20px;
+    background-color: #cce4ff;
+    width: 645px;
+    padding: 0 0 115px;
+    }
     .topnav {
       overflow: hidden;
       background-color: #333;
@@ -60,7 +69,7 @@
             <div class="content"style="padding-left:16px">
                 <div class="form">
                     <form method = "post">
-                        <input type="text" name="user_description" placeholder="Enter your Report">
+                        <input id="text-box" type="text" name="user_description" placeholder="Enter your Report">
                         <input type="submit" name="submit" value="Submit">
                     </form>
                 </div>

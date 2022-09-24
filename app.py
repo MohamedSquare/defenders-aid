@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/',methods=["POST","GET"])
 def index():
-    answer = 'Pending'
+    answer = 'The Articles of Human Rights associated with your report will appear here.'
     if request.method == "POST":
         description_to_classify = request.form.get("user_description")
 
