@@ -23,3 +23,5 @@ def article_mapper(article_name):
     return df.loc[str(article_name.strip())][0]
 
 app.run(host='0.0.0.0', port=81)
+if __name__ == '__main__':
+    app.run()
