@@ -20,7 +20,10 @@ def index():
 def article_mapper(article_name):
     df = pd.read_csv('human_rights_articles.csv')
     df.set_index("Article Name", inplace=True)
-    return df.loc[str(article_name.strip())][0]
+    if not article_name.strip().__contains__('Article'):
+        return 'This is not a human rights issue.'
+    else:    
+        return df.loc[str(article_name.strip())][0]
 
 # app.run(host='0.0.0.0', port=8080)
 if __name__ == '__main__':
